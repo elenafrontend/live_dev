@@ -1,0 +1,18 @@
+// === RESET ===
+@import "utils/_reset";
+@import "../css/normalize";
+
+// === FONTS ===
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+// === GLOBAL ===
+@import "utils/_vars";
+@import "utils/_mixin";
+@import "utils/_global";
+
+// === PAGES & MODULES ===
+
+@import "modules/header";
+@import "modules/footer";
+
+// === / PAGES & MODULES ===

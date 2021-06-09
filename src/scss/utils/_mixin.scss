@@ -1,0 +1,45 @@
+// === PLACEHOLDERS ===
+%list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+%btn {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+// === / PLACEHOLDERS ===
+
+// === MIXINS ===
+
+// Breakpoints
+@mixin breakpoint-min($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+@mixin breakpoint-max($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: (#{map-get($breakpoints, $breakpoint) - 1px})) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+// === / MIXINS ===
