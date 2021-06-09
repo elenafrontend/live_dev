@@ -2,12 +2,15 @@
 @import "modules/burger";
 
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
 	min-height: 75px;
 }
 
 .header__container {
-	position: fixed;
-
 	display: flex;
 	align-items: center;
 	padding-top: 35px;

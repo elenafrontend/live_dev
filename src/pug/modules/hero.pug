@@ -1,0 +1,11 @@
+mixin video(src)
+	- var src = src
+
+	video.hero__video(autoplay muted loop preload="auto")
+		source(src=src type="video/mp4")
+
+
+section.hero
+		.hero__videos
+			+video("video/puppies.mp4")
+			//- +video("video/flowers.mp4")
