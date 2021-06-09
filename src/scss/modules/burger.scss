@@ -1,0 +1,25 @@
+.burger {
+	@extend %btn;
+
+	display: flex;
+	flex-direction: column;
+
+	&:hover {
+		.burger__line {
+			transform: scaleX(0.5);
+		}
+	}
+}
+
+.burger__line {
+	display: inline-block;
+	margin-bottom: 10px;
+	width: 48px;
+	height: 2px;
+	background-color: $color-font-primary;
+	transition: $transition;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
