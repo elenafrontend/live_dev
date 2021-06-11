@@ -15,6 +15,11 @@
 	background-color: transparent;
 	cursor: pointer;
 }
+
+%hide {
+	opacity: 0;
+	visibility: hidden;
+}
 // === / PLACEHOLDERS ===
 
 // === MIXINS ===
