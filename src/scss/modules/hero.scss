@@ -1,3 +1,5 @@
+@import "slider-arrows";
+
 .hero {
 	position: relative;
 	overflow: hidden;
@@ -215,4 +217,9 @@
 
 	font-weight: 300;
 	color: $color-font-primary;
+}
+
+.hero__arrows {
+	grid-column: 3/4;
+	grid-row: 3;
 }
