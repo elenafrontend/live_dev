@@ -40,9 +40,11 @@
 
 	position: absolute;
 	left: 0;
+
 	display: block;
 	width: $base * 100;
 	height: $link-height;
+
 	background: $color-font-primary url("../images/sprite.svg#finance") no-repeat center;
 	background-size: contain;
 
@@ -129,8 +131,12 @@
 }
 
 .hero__residences-item {
-	flex-basis: 50%;
+	flex: 1 0 60%;
 	margin-bottom: $base * 7;
+
+	&:nth-child(2n) {
+		flex: 0 1 40%;
+	}
 }
 
 .residence__name {
