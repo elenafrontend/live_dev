@@ -1,11 +1,28 @@
-mixin video(src)
-	- var src = src
-
-	video.hero__video(autoplay muted loop preload="auto")
-		source(src=src type="video/mp4")
-
+include ../utils/mixins 
 
 section.hero
-		.hero__videos
-			+video("video/puppies.mp4")
-			//- +video("video/flowers.mp4")
+	h2.visually-hidden Подобрать квартиру своей мечты
+	.hero__videos
+		+video("video/puppies.mp4")
+		//- +video("video/flowers.mp4")
+		
+	.container
+		.hero__content
+			section.hero__links
+				h3.visually-hidden Дополнительный ссылки
+				a.finance-link(href="#")
+					span.visually-hidden Дом.рф - финансирование строительства
+					//- +svg({name: "finance", class: "finance-link__img"})
+				ul.social
+					li.social__item
+						a.social__link(href="#")
+							+svg({name: "fb", class: "social__link-img"})
+					li.social__item
+						a.social__link(href="#")
+							+svg({name: "insta", class: "social__link-img"})
+					li.social__item
+						a.social__link(href="#")
+							+svg({name: "twitter", class: "social__link-img"})
+					li.social__item
+						a.social__link(href="#")
+							+svg({name: "vk", class: "social__link-img"})

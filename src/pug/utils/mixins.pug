@@ -1,0 +1,10 @@
+mixin svg(options)
+	svg(class = options.class)
+		use(xlink:href="images/sprite.svg#" + options.name)
+
+
+mixin video(src)
+	- var src = src
+
+	video.hero__video(autoplay muted loop preload="auto")
+		source(src=src type="video/mp4")

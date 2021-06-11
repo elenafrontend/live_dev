@@ -5,12 +5,13 @@ body {
 }
 
 html {
+	font-size: $base * 5;
 	scroll-behavior: smooth;
 }
 
 body {
 	font-family: "CoreSansC", sans-serif;
-	font-size: 16px;
+	font-size: $base * 8;
 	color: $color-font-primary;
 	background-color: $color-bg;
 }
@@ -29,8 +30,8 @@ body {
 
 .container {
 	margin: 0 auto;
-	padding: 0 40px;
-	width: 100%;
+	padding: 0 $container-padding;
+	max-width: $container-width + $container-padding * 2;
 }
 
 .hover-effect {

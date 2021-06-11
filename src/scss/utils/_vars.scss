@@ -1,5 +1,15 @@
 // === VARIABLES ===
 
+$base: 2px;
+
+// Grid
+$header-height: $base * 38;
+$container-width: $base * 800;
+$container-padding: $base * 20;
+$column-left: $base * 204;
+$column-right: $base * 251;
+$filter-height: $base * 80;
+
 // Font
 
 // Colors
@@ -23,3 +33,21 @@ $transition: 0.2s;
 $bdrs: 3px;
 
 // === / VARIABLES ===
+
+// === FUNCTIONS ===
+
+// т.к. р-ры могут быть в разных ед измерения
+// сначала получаем множитель без единиц измерения (н-р 16px -> 16)
+
+@function strip-unit($num) {
+	@return $num / ($num * 0 + 1);
+}
+
+// переводим р-р в rem (при базовом р-ре 16)
+@function calcRem($num) {
+	@return (strip-unit($num) / 16) * 1rem;
+}
+// оборачиваем все наши размеры в переменных в эту функцию - получаем р-ры в rem
+// теперь при изменении font-size для html - все размеры автоматич пересчитаются
+
+// === / FUNCTIONS ===

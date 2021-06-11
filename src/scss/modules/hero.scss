@@ -1,6 +1,7 @@
 .hero {
 	position: relative;
-	min-height: 100vh;
+	overflow: hidden;
+	height: 100vh;
 }
 
 .hero__videos {
@@ -16,6 +17,66 @@
 .hero__video {
 	width: 100%;
 	height: 100%;
-
 	object-fit: cover;
+}
+
+.hero__content {
+	display: grid;
+	grid-template-columns: $column-left minmax(0, 1fr) $column-right;
+	grid-template-rows: $header-height $base * 64 1fr $filter-height;
+	min-height: 100vh;
+}
+
+.hero__links {
+	grid-row: 3;
+}
+
+.finance-link {
+	$link-height: $base * 28;
+
+	position: absolute;
+	left: 0;
+	display: block;
+	width: $base * 100;
+	height: $link-height;
+	background: $color-font-primary url("../images/sprite.svg#finance") no-repeat center;
+	background-size: contain;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 100%;
+		border: $link-height/2 solid $color-font-primary;
+		border-right-width: $base * 4;
+		border-right-color: transparent;
+		border-left-width: $base * 4;
+		width: 0;
+		height: 0;
+	}
+}
+
+.social {
+	@extend %list;
+
+	margin-top: $base * 94;
+}
+
+.social__item {
+	margin-bottom: $base * 15;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.social__link {
+	display: inline-block;
+	width: $base * 10;
+	height: $base * 10;
+}
+
+.social__link-img {
+	max-width: 100%;
+	max-height: 100%;
 }
