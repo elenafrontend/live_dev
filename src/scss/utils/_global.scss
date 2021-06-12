@@ -72,6 +72,16 @@ body {
 	}
 }
 
+.btn {
+	@extend %btn;
+
+	border: 1px solid $color-font-primary;
+	border-radius: $base * 3.5;
+	padding: $base * 10 $base * 11.5 $base * 8.5;
+	font-weight: 400;
+	color: $color-font-primary;
+}
+
 // === / COMMON ===
 
 // === ANIMATION ===
