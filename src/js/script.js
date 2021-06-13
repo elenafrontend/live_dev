@@ -96,7 +96,7 @@ const videoSlider = new Swiper('.hero__videos', {
 	speed: 1000,
 
 	autoplay: {
-		delay: 4000,
+		delay: 3000,
 	},
 });
 

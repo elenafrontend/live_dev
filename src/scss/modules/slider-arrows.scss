@@ -17,7 +17,7 @@
 		outline: none;
 
 		&::before {
-			transform: scale(1);
+			// transform: scale(1);
 		}
 	}
 
@@ -52,5 +52,30 @@
 
 	&--right {
 		transform: translate(-50%, -50%) rotate(180deg);
+	}
+}
+
+.slider-arrows__item-ellipse {
+	circle {
+		stroke: rgba(255, 255, 255, 0.5);
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 2000;
+		transform: rotate(-90deg);
+		transform-origin: center;
+		animation-name: draw;
+		animation-duration: 4s;
+		animation-iteration-count: infinite;
+		animation-delay: 3s;
+	}
+}
+
+@keyframes draw {
+	from {
+		stroke-dashoffset: 1000;
+		stroke: #fff;
+	}
+
+	to {
+		stroke-dashoffset: 0;
 	}
 }
