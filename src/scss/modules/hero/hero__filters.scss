@@ -14,7 +14,6 @@
 	position: relative;
 	display: flex;
 	align-items: center;
-	margin-right: $base * 10;
 	border: none;
 	padding: 0;
 }
@@ -154,6 +153,14 @@ input[type="number"] {
 }
 
 // Select
+.filters__item-residence {
+	display: none;
+
+	@include breakpoint-min(lg) {
+		display: block;
+	}
+}
+
 .filters__select {
 	position: relative;
 
@@ -181,28 +188,32 @@ input[type="number"] {
 
 // Buttons
 .filters__more {
-	display: flex;
-	align-items: center;
-	margin-right: $base * 10;
-	border-color: $color-font-secondary;
-	padding: 0 $base * 5;
-	padding-left: $base * 9;
-	width: $base * 63.5;
-	height: $base * 28;
-	font-size: $base * 6.5;
-	text-align: left;
+	display: none;
 
-	svg {
-		order: -1;
-		margin-right: $base * 7;
-		width: $base * 9.5;
-		height: $base * 8;
-	}
+	@include breakpoint-min(xxl) {
+		display: flex;
+		align-items: center;
+		border-color: $color-font-secondary;
+		padding: 0 $base * 5;
+		padding-left: $base * 9;
+		width: $base * 63.5;
+		height: $base * 28;
 
-	&:hover,
-	&:focus {
-		color: $color-bg;
-		background-color: $color-font-primary;
+		font-size: $base * 6.5;
+		text-align: left;
+
+		svg {
+			order: -1;
+			margin-right: $base * 7;
+			width: $base * 9.5;
+			height: $base * 8;
+		}
+
+		&:hover,
+		&:focus {
+			color: $color-bg;
+			background-color: $color-font-primary;
+		}
 	}
 }
 

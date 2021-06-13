@@ -11,8 +11,20 @@ body {
 }
 
 html {
-	font-size: $base * 5;
+	font-size: 7px;
 	scroll-behavior: smooth;
+
+	@include breakpoint-min(xxl) {
+		font-size: 10px;
+	}
+
+	@include breakpoint-min(xl) {
+		font-size: 9px;
+	}
+
+	@include breakpoint-min(lg) {
+		font-size: 8px;
+	}
 }
 
 body {

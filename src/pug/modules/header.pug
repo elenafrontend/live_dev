@@ -1,9 +1,13 @@
+include ../utils/mixins 
+
 header.header
 	.container.header__container
 		a.logo(href="#")
 			span.logo__img Life 
 			span development
-		.header__contacts 
-			a.header__contacts-phone(href="tel:88002223790" target="_blank") 8 800 222-37-90
+		.header__contacts
+			a.header__contacts-phone(href="tel:88002223790" target="_blank")
+				+svg({class: "header__contacts-img", name: "phone"})
+				span 8 800 222-37-90
 			p.header__contacts-time Работаем ежедневно с 10:00 до 20:00
 		include nav 

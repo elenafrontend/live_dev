@@ -1,6 +1,24 @@
+// === FUNCTIONS ===
+
+// т.к. р-ры могут быть в разных ед измерения
+// сначала получаем множитель без единиц измерения (н-р 16px -> 16)
+
+@function strip-unit($num) {
+	@return $num / ($num * 0 + 1);
+}
+
+// переводим р-р в rem (при базовом р-ре 16)
+@function calcRem($num) {
+	@return (strip-unit($num) / 10) * 1rem;
+}
+// оборачиваем все наши размеры в переменных в эту функцию - получаем р-ры в rem
+// теперь при изменении font-size для html - все размеры автоматич пересчитаются
+
+// === / FUNCTIONS ===
+
 // === VARIABLES ===
 
-$base: 2px;
+$base: calcRem(2px);
 
 // Grid
 $header-height: $base * 38;
@@ -24,30 +42,13 @@ $breakpoints: (
 	xs: 400px,
 	sm: 576px,
 	md: 768px,
-	lg: 992px,
-	xl: 1200px,
-	xxl: 1400px,
+	// 992
+	lg: 1366px,
+	xl: 1400px,
+	xxl: 1600px,
 );
 
 $transition: 0.2s;
 $bdrs: 3px;
 
 // === / VARIABLES ===
-
-// === FUNCTIONS ===
-
-// т.к. р-ры могут быть в разных ед измерения
-// сначала получаем множитель без единиц измерения (н-р 16px -> 16)
-
-@function strip-unit($num) {
-	@return $num / ($num * 0 + 1);
-}
-
-// переводим р-р в rem (при базовом р-ре 16)
-@function calcRem($num) {
-	@return (strip-unit($num) / 16) * 1rem;
-}
-// оборачиваем все наши размеры в переменных в эту функцию - получаем р-ры в rem
-// теперь при изменении font-size для html - все размеры автоматич пересчитаются
-
-// === / FUNCTIONS ===

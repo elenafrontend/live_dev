@@ -12,13 +12,14 @@
 
 .header__container {
 	display: grid;
-	grid-template-columns: $column-left $base * 187 minmax(0, 1fr) $column-right;
+	grid-template-columns: minmax($base * 100, $column-left) minmax($base * 50, $base * 187) minmax($base * 70, 1fr) $column-right;
 	padding-top: $base * 17.5;
 }
 
 //  logo
 .logo {
 	grid-column: 1/1;
+	max-width: 100%;
 	font-weight: 600;
 	color: $color-font-primary;
 }
@@ -39,15 +40,15 @@
 
 // Contacts
 .header__contacts {
-	grid-column: 2/3;
+	grid-column: 2/4;
 	padding-top: $base * 2;
 }
 
 .header__contacts-phone {
 	position: relative;
-	z-index: 10;
 
-	display: inline-block;
+	display: flex;
+	align-items: center;
 	margin-bottom: $base * 3;
 
 	font-weight: inherit;
@@ -61,7 +62,22 @@
 	}
 }
 
+.header__contacts-img {
+	width: $base * 15;
+	height: $base * 15;
+	margin-right: $base * 10;
+
+	@include breakpoint-min(lg) {
+		display: none;
+	}
+}
+
 .header__contacts-time {
-	margin: 0;
-	color: $color-font-secondary;
+	display: none;
+
+	@include breakpoint-min(lg) {
+		display: block;
+		margin: 0;
+		color: $color-font-secondary;
+	}
 }

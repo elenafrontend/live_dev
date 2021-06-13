@@ -1,8 +1,13 @@
 // --- Residences ---
 
 .hero__residences {
-	grid-column: 2/3;
-	grid-row: 3/4;
+	display: none;
+
+	@include breakpoint-min(lg) {
+		display: block;
+		grid-column: 2/3;
+		grid-row: 3/4;
+	}
 }
 
 .hero__residences-list {

@@ -13,7 +13,10 @@
   <body> 
     <header class="header">
       <div class="container header__container"><a class="logo" href="#"><span class="logo__img">Life </span><span>development</span></a>
-        <div class="header__contacts"> <a class="header__contacts-phone" href="tel:88002223790" target="_blank">8 800 222-37-90</a>
+        <div class="header__contacts"><a class="header__contacts-phone" href="tel:88002223790" target="_blank">
+                <svg class="header__contacts-img">
+                  <use xlink:href="images/sprite.svg#phone"></use>
+                </svg><span>8 800 222-37-90</span></a>
           <p class="header__contacts-time">Работаем ежедневно с 10:00 до 20:00</p>
         </div>
         <nav class="nav">
@@ -232,7 +235,7 @@
                     <input class="filters__input" type="number" min="25" max="250" placeholder="17,5">
                   </label>
                 </fieldset>
-                <fieldset class="filters__item">
+                <fieldset class="filters__item filters__item-residence">
                   <legend class="filters__item-title">Жилой комплекс</legend>
                   <div class="filters__select">
                     <select class="filters__option filters__input">

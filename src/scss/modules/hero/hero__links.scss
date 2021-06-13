@@ -32,7 +32,9 @@
 .social {
 	@extend %list;
 
-	margin-top: $base * 94;
+	margin-top: auto;
+	margin-bottom: $base * 20;
+	padding-top: $base * 94;
 }
 
 .social__item {
