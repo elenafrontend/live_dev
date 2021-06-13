@@ -18,6 +18,22 @@
 	padding: 0;
 }
 
+.filters__item-price {
+	display: none;
+
+	@include breakpoint-min(md) {
+		display: block;
+	}
+}
+
+.filters__item-residence {
+	display: none;
+
+	@include breakpoint-min(lg) {
+		display: block;
+	}
+}
+
 .filters__item-title {
 	position: absolute;
 	top: $base * (-15);
@@ -153,13 +169,6 @@ input[type="number"] {
 }
 
 // Select
-.filters__item-residence {
-	display: none;
-
-	@include breakpoint-min(lg) {
-		display: block;
-	}
-}
 
 .filters__select {
 	position: relative;

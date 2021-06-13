@@ -63,9 +63,9 @@
 }
 
 .header__contacts-img {
+	margin-right: $base * 10;
 	width: $base * 15;
 	height: $base * 15;
-	margin-right: $base * 10;
 
 	@include breakpoint-min(lg) {
 		display: none;

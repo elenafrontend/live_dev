@@ -1,17 +1,24 @@
 .nav {
 	display: flex;
-	align-items: center;
-	align-self: start;
-	justify-content: space-between;
+	justify-content: flex-end;
 	grid-column: -1/-2;
 	width: 100%;
+
+	@include breakpoint-min(md) {
+		align-items: center;
+		align-self: start;
+		justify-content: space-between;
+	}
 }
 
 .nav__list {
 	@extend %list;
+	display: none;
 
-	display: flex;
-	justify-content: space-between;
+	@include breakpoint-min(md) {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 .nav__item {
