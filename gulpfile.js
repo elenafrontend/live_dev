@@ -117,6 +117,7 @@ function build() {
 		'src/fonts/**/*',
 		'src/js/script.min.js',
 		'src/*.html',
+		'src/video/**/*',
 	], {base: 'src'})
 		.pipe(dest('dist'))
 }
