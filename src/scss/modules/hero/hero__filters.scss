@@ -148,7 +148,7 @@ input[type="number"] {
 .range-slider {
 	position: absolute;
 	bottom: -1px;
-	width: 100%;
+	width: calc(100% - 17px);
 }
 
 .range-slider-label {
@@ -193,8 +193,8 @@ input[type="number"] {
 
 .noUi-horizontal .noUi-handle {
 	top: -9px;
-	width: $base * 10.5;
-	height: $base * 10.5;
+	width: 21px;
+	height: 21px;
 }
 
 // Select
