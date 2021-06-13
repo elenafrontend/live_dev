@@ -8,6 +8,7 @@
     <meta name="description" content="Mark Weber, test task - Gumerova Elena">
     <meta property="og:image" content="images/houses.jpg">
     <title>Life development</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body> 
@@ -34,10 +35,15 @@
       <h1 class="visually-hidden">Life development</h1>
       <section class="hero">
         <h2 class="visually-hidden">Подобрать квартиру своей мечты</h2>
-        <div class="hero__videos">
-                <video class="hero__video" autoplay muted loop preload="auto">
-                  <source src="video/puppies.mp4" type="video/mp4">
-                </video>
+        <div class="hero__videos swiper-container">
+          <div class="swiper-wrapper">
+                  <video class="hero__video swiper-slide" autoplay muted loop preload="auto">
+                    <source src="video/puppies.mp4" type="video/mp4">
+                  </video>
+                  <video class="hero__video swiper-slide" autoplay muted loop preload="auto">
+                    <source src="video/flowers.mp4" type="video/mp4">
+                  </video>
+          </div>
         </div>
         <div class="container">
           <div class="hero__content">
@@ -169,12 +175,12 @@
             <section class="hero__arrows">
               <h3 class="visually-hidden">Управление слайдером</h3>
               <div class="slider-arrows"> 
-                <button class="slider-arrows__item">
+                <button class="slider-arrows__item slider-arrows__prev">
                         <svg class="slider-arrows__item-arrow">
                           <use xlink:href="images/sprite.svg#arrow-left"></use>
                         </svg>
                 </button>
-                <button class="slider-arrows__item"> 
+                <button class="slider-arrows__item slider-arrows__next">
                         <svg class="slider-arrows__item-ellipse">
                           <use xlink:href="images/sprite.svg#ellipse"></use>
                         </svg>
@@ -186,8 +192,11 @@
             </section>
             <section class="hero__action"> 
               <h3 class="visually-hidden">Почему именно наши квартиры</h3>
-              <div class="hero__action-reasons"> 
-                <p>Стильная архитектура и виды из окон будущей квартиры не оставят равнодушных</p>
+              <div class="hero__action-reasons swiper-container">
+                <div class="swiper-wrapper">
+                  <p class="swiper-slide">Стильная архитектура и виды из окон будущей квартиры не оставят равнодушных</p>
+                  <p class="swiper-slide">Большие парковые территории и безопасные дворы созданы для счастливой жизни</p>
+                </div>
               </div>
               <div class="hero__action-buttons"> 
                 <button class="btn hero__action-btn">Выбрать квартиру
@@ -269,6 +278,7 @@
       </section>
     </main>
     <script src="js/nouislider.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>

@@ -6,7 +6,7 @@ mixin svg(options)
 mixin video(src)
 	- var src = src
 
-	video.hero__video(autoplay muted loop preload="auto")
+	video.hero__video.swiper-slide(autoplay muted loop preload="auto")
 		source(src=src type="video/mp4")
 
 mixin residence(options)

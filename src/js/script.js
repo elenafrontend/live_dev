@@ -1,4 +1,5 @@
 // Range Sliders
+// https://refreshless.com/nouislider/
 
 const rangeSliderSquare = document.getElementById('range-slider-square');
 const rangeSliderPrice= document.getElementById('range-slider-price');
@@ -78,4 +79,32 @@ if (rangeSliderPrice) {
 		});
 	});
 }
+
+// Slider video/text
+// https://swiperjs.com/
+
+const videoSlider = new Swiper('.hero__videos', {
+  // Optional parameters
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.slider-arrows__next',
+    prevEl: '.slider-arrows__prev',
+  },
+
+	speed: 1000,
+
+	autoplay: {
+		delay: 4000,
+	},
+});
+
+const textSlider = new Swiper('.hero__action-reasons', {
+  // Optional parameters
+  loop: true,
+
+});
+
+videoSlider.controller.control = textSlider;
 
