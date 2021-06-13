@@ -1,6 +1,10 @@
 .nav {
-	margin-right: 40px;
-	margin-left: auto;
+	display: flex;
+	align-items: center;
+	align-self: start;
+	justify-content: space-between;
+	grid-column: -1/-2;
+	width: 100%;
 }
 
 .nav__list {
@@ -11,7 +15,7 @@
 }
 
 .nav__item {
-	margin-right: 20px;
+	margin-right: $base * 10;
 
 	&:last-child {
 		margin-right: 0;
@@ -20,6 +24,7 @@
 
 .nav__link {
 	display: inline-block;
+	letter-spacing: -0.01em;
 	color: $color-font-primary;
 
 	&:hover {

@@ -11,17 +11,15 @@
 }
 
 .header__container {
-	display: flex;
-	align-items: center;
+	display: grid;
+	grid-template-columns: $column-left $base * 187 minmax(0, 1fr) $column-right;
 	padding-top: 35px;
-	padding-bottom: 35px;
+	// padding-bottom: 35px;
 }
 
 //  logo
 .logo {
-	position: absolute;
-	top: 35px;
-
+	grid-column: 1/1;
 	font-weight: 600;
 	color: $color-font-primary;
 }
@@ -38,4 +36,33 @@
 	text-align: center;
 
 	background: radial-gradient(66.89% 66.89% at 59.24% 24.84%, #fec8c1 0%, rgba(229, 106, 89, 0) 100%), #d13233;
+}
+
+// Contacts
+.header__contacts {
+	grid-column: 2/3;
+	padding-top: $base * 2;
+}
+
+.header__contacts-phone {
+	position: relative;
+	z-index: 10;
+
+	display: inline-block;
+	margin-bottom: $base * 3;
+
+	font-weight: inherit;
+	font-size: $base * 10;
+	color: $color-font-primary;
+
+	transition: $transition;
+
+	&:hover {
+		color: $color-font-secondary;
+	}
+}
+
+.header__contacts-time {
+	margin: 0;
+	color: $color-font-secondary;
 }
