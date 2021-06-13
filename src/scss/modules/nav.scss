@@ -2,7 +2,6 @@
 	display: flex;
 	justify-content: flex-end;
 	grid-column: -1/-2;
-	width: 100%;
 
 	@include breakpoint-min(md) {
 		align-items: center;

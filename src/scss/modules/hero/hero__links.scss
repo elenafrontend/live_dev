@@ -3,38 +3,62 @@
 }
 
 .finance-link {
-	$link-height: $base * 28;
+	$link-height: 55px;
 
 	position: absolute;
-	left: 0;
+	bottom: 30%;
+	right: 0;
 
 	display: block;
-	width: $base * 100;
+	width: 205px;
 	height: $link-height;
 
 	background: $color-font-primary url("../images/sprite.svg#finance") no-repeat center;
 	background-size: contain;
 
+	transform: translateX(145px);
+
 	&::after {
 		content: "";
 		position: absolute;
 		top: 0;
-		left: 100%;
+		left: -4px;
 		border: $link-height/2 solid $color-font-primary;
-		border-right-width: $base * 4;
-		border-right-color: transparent;
-		border-left-width: $base * 4;
+		border-right-width: 4px;
+		border-left-width: 4px;
+		border-left-color: transparent;
 		width: 0;
 		height: 0;
+	}
+
+	@include breakpoint-min(xs) {
+		bottom: auto;
+		left: 0;
+		width: $base * 100;
+
+		transform: translateX(0);
+
+		&::after {
+			left: 100%;
+			border-right-width: 8px;
+			border-right-color: transparent;
+			border-left-width: 8px;
+			border-left-color: $color-font-primary;
+		}
 	}
 }
 
 .social {
 	@extend %list;
 
-	margin-top: auto;
-	margin-bottom: $base * 20;
-	padding-top: $base * 94;
+	display: none;
+
+	@include breakpoint-min(xs) {
+		display: block;
+		margin-top: auto;
+		margin-bottom: $base * 20;
+		padding-top: $base * 94;
+	}
 }
 
 .social__item {

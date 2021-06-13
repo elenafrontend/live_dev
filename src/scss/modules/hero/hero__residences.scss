@@ -105,7 +105,12 @@
 }
 
 .residence__description {
+	display: none;
 	color: $color-font-secondary;
+
+	@include breakpoint-min(xl) {
+		display: block;
+	}
 }
 
 .residence__about-title {

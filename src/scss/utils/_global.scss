@@ -52,8 +52,13 @@ body {
 
 .container {
 	margin: 0 auto;
-	padding: 0 $container-padding;
-	max-width: $container-width + $container-padding * 2;
+	padding: 0 15px;
+	width: 100%;
+
+	@include breakpoint-min(xxs) {
+		padding: 0 $container-padding;
+		max-width: $container-width + $container-padding * 2;
+	}
 }
 
 .hover-effect {

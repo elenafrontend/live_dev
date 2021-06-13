@@ -2,7 +2,7 @@ section.hero__filters
 	h3.visually-hidden Выбрать параметры квартиры
 	form(action="#").filters
 		//- Rooms
-		fieldset.filters__item
+		fieldset.filters__item.filters__item-rooms
 			legend.filters__item-title Количество комнат
 			input.filters__input.visually-hidden(type="radio" name="room" id="studio" checked)
 			label.filters__option.filters__option--square(for="studio") cтудия
@@ -15,7 +15,7 @@ section.hero__filters
 			input.filters__input.visually-hidden(type="radio" name="room" value="4" id="room-4")
 			label.filters__option.filters__option--square(for="room-4") 4
 		//- Square
-		fieldset.filters__item
+		fieldset.filters__item.filters__item-square
 			legend.filters__item-title Площадь
 			.range-slider#range-slider-square
 			label.range-slider-label.filters__option
@@ -49,6 +49,11 @@ section.hero__filters
 					option(value="Ренесанс") Ренесанс
 					option(value="Краски") Краски
 				+svg({name: "arrow-down"})
+		//- Search
+		fieldset.filters__search 
+			input.filters__search-text(type="text" placeholder="Подобрать квартиру") 
+			a(href="#").filters__search-btn.btn
+				+svg({name:"search"})
 
 		button.filters__more.btn Ещё фильтры
 			+svg({name: "filters"})

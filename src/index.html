@@ -203,7 +203,7 @@
             <section class="hero__filters">
               <h3 class="visually-hidden">Выбрать параметры квартиры</h3>
               <form class="filters" action="#">
-                <fieldset class="filters__item">
+                <fieldset class="filters__item filters__item-rooms">
                   <legend class="filters__item-title">Количество комнат</legend>
                   <input class="filters__input visually-hidden" type="radio" name="room" id="studio" checked>
                   <label class="filters__option filters__option--square" for="studio">cтудия</label>
@@ -216,7 +216,7 @@
                   <input class="filters__input visually-hidden" type="radio" name="room" value="4" id="room-4">
                   <label class="filters__option filters__option--square" for="room-4">4</label>
                 </fieldset>
-                <fieldset class="filters__item">
+                <fieldset class="filters__item filters__item-square">
                   <legend class="filters__item-title">Площадь</legend>
                   <div class="range-slider" id="range-slider-square"></div>
                   <label class="range-slider-label filters__option"><span>от</span>
@@ -250,6 +250,12 @@
                             <use xlink:href="images/sprite.svg#arrow-down"></use>
                           </svg>
                   </div>
+                </fieldset>
+                <fieldset class="filters__search"> 
+                  <input class="filters__search-text" type="text" placeholder="Подобрать квартиру"><a class="filters__search-btn btn" href="#">
+                          <svg>
+                            <use xlink:href="images/sprite.svg#search"></use>
+                          </svg></a>
                 </fieldset>
                 <button class="filters__more btn">Ещё фильтры
                         <svg>

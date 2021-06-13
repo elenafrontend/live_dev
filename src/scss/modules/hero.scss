@@ -22,10 +22,20 @@
 }
 
 .hero__content {
-	display: grid;
-	grid-template-columns: minmax($base * 100, $column-left) minmax($base * 50, $base * 187) minmax($base * 70, 1fr) $column-right;
-	grid-template-rows: $header-height $base * 64 1fr $filter-height;
-	min-height: $base * 400;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	@include breakpoint-min(xs) {
+		display: grid;
+		grid-template-columns: 0 minmax($base * 30, $base * 187) minmax(0, 1fr) $column-right;
+		grid-template-rows: $header-height $base * 64 1fr $filter-height;
+		min-height: $base * 400;
+	}
+
+	@include breakpoint-min(md) {
+		grid-template-columns: $column-left minmax($base * 30, $base * 187) minmax(0, 1fr) $column-right;
+	}
 
 	@include breakpoint-min(lg) {
 		min-height: 100vh;

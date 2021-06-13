@@ -11,16 +11,24 @@
 }
 
 .header__container {
-	display: grid;
-	grid-template-columns: minmax($base * 100, $column-left) minmax($base * 50, $base * 187) minmax($base * 70, 1fr) $column-right;
+	display: flex;
+	align-items: center;
 	padding-top: $base * 17.5;
+
+	@include breakpoint-min(md) {
+		display: grid;
+		grid-template-columns: $column-left minmax($base * 30, $base * 187) minmax(0, 1fr) $column-right;
+	}
 }
 
 //  logo
 .logo {
-	grid-column: 1/1;
+	display: flex;
+	align-items: center;
+	margin-right: auto;
 	max-width: 100%;
 	font-weight: 600;
+	font-size: 16px;
 	color: $color-font-primary;
 }
 
@@ -28,11 +36,11 @@
 	display: inline-block;
 	margin-right: $base * 3.5;
 	border-radius: 50%;
-	width: $base * 23.5;
-	height: $base * 23.5;
+	width: 47px;
+	height: 47px;
 	box-shadow: -6px 8px 8px rgba(0, 0, 0, 0.1);
 
-	line-height: $base * 23.5;
+	line-height: 47px;
 	text-align: center;
 
 	background: radial-gradient(66.89% 66.89% at 59.24% 24.84%, #fec8c1 0%, rgba(229, 106, 89, 0) 100%), #d13233;
@@ -40,8 +48,9 @@
 
 // Contacts
 .header__contacts {
-	grid-column: 2/4;
-	padding-top: $base * 2;
+	@include breakpoint-min(lg) {
+		padding-top: $base * 2;
+	}
 }
 
 .header__contacts-phone {
@@ -49,7 +58,6 @@
 
 	display: flex;
 	align-items: center;
-	margin-bottom: $base * 3;
 
 	font-weight: inherit;
 	font-size: $base * 10;
@@ -60,12 +68,30 @@
 	&:hover {
 		color: $color-font-secondary;
 	}
+
+	span {
+		display: none;
+
+		@include breakpoint-min(sm) {
+			display: inline-block;
+			margin-right: $base * 20;
+		}
+	}
+
+	@include breakpoint-min(lg) {
+		margin-bottom: $base * 3;
+	}
 }
 
 .header__contacts-img {
-	margin-right: $base * 10;
-	width: $base * 15;
-	height: $base * 15;
+	margin-right: $base * 12;
+	width: 36px;
+	height: 36px;
+
+	@include breakpoint-min(md) {
+		width: $base * 15;
+		height: $base * 15;
+	}
 
 	@include breakpoint-min(lg) {
 		display: none;

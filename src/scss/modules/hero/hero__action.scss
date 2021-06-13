@@ -1,18 +1,37 @@
 //--- Action ---
 
 .hero__action {
-	grid-column: 4/5;
-	grid-row: 3/4;
+	margin-top: 35%;
+
+	@include breakpoint-min(xs) {
+		grid-column: 4/5;
+		grid-row: 3/4;
+		margin-top: 0;
+	}
 }
 
 .hero__action-reasons {
 	margin-bottom: $base * 15;
-	font-size: $base * 20;
+	font-size: $base * 16;
 	line-height: $base * 23.5;
 	letter-spacing: -0.02em;
 
 	p {
 		margin: 0;
+	}
+
+	@include breakpoint-min(xxs) {
+		font-size: $base * 20;
+	}
+}
+
+.hero__action-buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+
+	@include breakpoint-min(xs) {
+		display: block;
 	}
 }
 
@@ -20,6 +39,7 @@
 	position: relative;
 	display: inline-flex;
 	align-items: center;
+	margin-bottom: $base * 10;
 	transition: $transition;
 
 	svg {
@@ -39,6 +59,7 @@
 .btn.hero__action-link {
 	display: inline-flex;
 	border-color: transparent;
+	padding-left: 0;
 
 	span {
 		margin-right: $base * 3;
@@ -54,6 +75,10 @@
 	&:hover,
 	&:focus {
 		color: $color-font-secondary;
+	}
+
+	@include breakpoint-min(xs) {
+		padding-left: $base * 11;
 	}
 }
 // --- / Action ---

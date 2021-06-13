@@ -18,6 +18,17 @@
 
 // === VARIABLES ===
 
+// Breakpoints
+$breakpoints: (
+	xxs: 400px,
+	xs: 640px,
+	sm: 768px,
+	md: 1024px,
+	lg: 1366px,
+	xl: 1400px,
+	xxl: 1600px,
+);
+
 $base: calcRem(2px);
 
 // Grid
@@ -36,17 +47,6 @@ $color-font-secondary: rgba(255, 255, 255, 0.5);
 $color-bg: #000000;
 $color-bg-white: rgba(255, 255, 255, 0.15);
 $color-red: #d90002;
-
-// Breakpoints
-$breakpoints: (
-	xxs: 400px,
-	xs: 576px,
-	sm: 768px,
-	md: 1024px,
-	lg: 1366px,
-	xl: 1400px,
-	xxl: 1600px,
-);
 
 $transition: 0.2s;
 $bdrs: 3px;
