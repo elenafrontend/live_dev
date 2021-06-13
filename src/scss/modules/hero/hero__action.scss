@@ -29,7 +29,8 @@
 		height: $base * 5.5;
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 		box-shadow: inset 0 0 0 2em $color-font-primary;
 		color: $color-bg;
 	}

@@ -1,4 +1,10 @@
 // === COMMON ===
+*,
+*::after,
+*::before {
+	outline-color: $color-red;
+}
+
 html,
 body {
 	height: 100%;
@@ -14,8 +20,8 @@ body {
 	font-weight: 300;
 	font-size: $base * 8;
 	line-height: $base * 10;
-	color: $color-font-primary;
 	letter-spacing: 1px;
+	color: $color-font-primary;
 
 	background-color: $color-bg;
 }
