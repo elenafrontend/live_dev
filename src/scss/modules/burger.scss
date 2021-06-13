@@ -13,8 +13,8 @@
 
 .burger__line {
 	display: inline-block;
-	margin-bottom: 10px;
-	width: 48px;
+	margin-bottom: $base * 5;
+	width: $base * 24;
 	height: 2px;
 	background-color: $color-font-primary;
 	transition: $transition;

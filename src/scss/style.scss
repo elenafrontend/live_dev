@@ -7,14 +7,13 @@
 @import "utils/_fonts";
 
 // === GLOBAL ===
-@import "utils/_vars";
 @import "utils/_mixin";
+@import "utils/_vars";
 @import "utils/_global";
 
 // === PAGES & MODULES ===
 
 @import "modules/header";
 @import "modules/hero";
-@import "modules/footer";
 
 // === / PAGES & MODULES ===

@@ -13,8 +13,7 @@
 .header__container {
 	display: grid;
 	grid-template-columns: $column-left $base * 187 minmax(0, 1fr) $column-right;
-	padding-top: 35px;
-	// padding-bottom: 35px;
+	padding-top: $base * 17.5;
 }
 
 //  logo
@@ -26,13 +25,13 @@
 
 .logo__img {
 	display: inline-block;
-	margin-right: 7px;
+	margin-right: $base * 3.5;
 	border-radius: 50%;
-	width: 47px;
-	height: 47px;
+	width: $base * 23.5;
+	height: $base * 23.5;
 	box-shadow: -6px 8px 8px rgba(0, 0, 0, 0.1);
 
-	line-height: 47px;
+	line-height: $base * 23.5;
 	text-align: center;
 
 	background: radial-gradient(66.89% 66.89% at 59.24% 24.84%, #fec8c1 0%, rgba(229, 106, 89, 0) 100%), #d13233;
