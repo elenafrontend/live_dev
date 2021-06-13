@@ -197,10 +197,69 @@
                         </svg></a>
               </div>
             </section>
+            <section class="hero__filters">
+              <h3 class="visually-hidden">Выбрать параметры квартиры</h3>
+              <form class="filters" action="#">
+                <fieldset class="filters__item">
+                  <legend class="filters__item-title">Количество комнат</legend>
+                  <input class="filters__input visually-hidden" type="radio" name="room" id="studio" checked>
+                  <label class="filters__option filters__option--square" for="studio">cтудия</label>
+                  <input class="filters__input visually-hidden" type="radio" name="room" value="1" id="room-1">
+                  <label class="filters__option filters__option--square" for="room-1">1</label>
+                  <input class="filters__input visually-hidden" type="radio" name="room" value="2" id="room-2">
+                  <label class="filters__option filters__option--square" for="room-2">2</label>
+                  <input class="filters__input visually-hidden" type="radio" name="room" value="3" id="room-3">
+                  <label class="filters__option filters__option--square" for="room-3">3</label>
+                  <input class="filters__input visually-hidden" type="radio" name="room" value="4" id="room-4">
+                  <label class="filters__option filters__option--square" for="room-4">4</label>
+                </fieldset>
+                <fieldset class="filters__item">
+                  <legend class="filters__item-title">Площадь</legend>
+                  <div class="range-slider" id="range-slider-square"></div>
+                  <label class="range-slider-label filters__option"><span>от</span>
+                    <input class="filters__input" type="number" min="25" max="250" placeholder="32"><span>м<sup>2</sup></span>
+                  </label>
+                  <label class="range-slider-label filters__option"><span>от</span>
+                    <input class="filters__input" type="number" min="25" max="250" placeholder="186"><span>м<sup>2</sup></span>
+                  </label>
+                </fieldset>
+                <fieldset class="filters__item">
+                  <legend class="filters__item-title">Стоимость, млн ₽</legend>
+                  <div class="range-slider" id="range-slider-price"></div>
+                  <label class="range-slider-label filters__option"><span>от</span>
+                    <input class="filters__input" type="number" min="25" max="250" placeholder="1,5">
+                  </label>
+                  <label class="range-slider-label filters__option"><span>от</span>
+                    <input class="filters__input" type="number" min="25" max="250" placeholder="17,5">
+                  </label>
+                </fieldset>
+                <fieldset class="filters__item">
+                  <legend class="filters__item-title">Жилой комплекс</legend>
+                  <div class="filters__select">
+                    <select class="filters__option filters__input">
+                      <option value="Северный парк">Северный парк</option>
+                      <option value="Станция Столичная">Станция Столичная</option>
+                      <option value="Компасс сити">Компасс сити</option>
+                      <option value="Ренесанс">Ренесанс</option>
+                      <option value="Краски">Краски</option>
+                    </select>
+                          <svg>
+                            <use xlink:href="images/sprite.svg#arrow-down"></use>
+                          </svg>
+                  </div>
+                </fieldset>
+                <button class="filters__more btn">Ещё фильтры
+                        <svg>
+                          <use xlink:href="images/sprite.svg#filters"></use>
+                        </svg>
+                </button><a class="filters__show btn">Показать 120 квартир</a>
+              </form>
+            </section>
           </div>
         </div>
       </section>
     </main>
+    <script src="js/nouislider.min.js"></script>
     <script src="js/script.min.js"></script>
   </body>
 </html>

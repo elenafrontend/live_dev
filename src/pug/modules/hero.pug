@@ -8,94 +8,13 @@ section.hero
 		
 	.container
 		.hero__content
-			section.hero__links
-				h3.visually-hidden Дополнительные ссылки
-				a.finance-link(href="#" target="_blank")
-					span.visually-hidden Дом.рф - финансирование строительства
-					//- +svg({name: "finance", class: "finance-link__img"})
-				ul.social
-					li.social__item
-						a.social__link(href="#" target="_blank")
-							+svg({name: "fb", class: "social__link-img"})
-					li.social__item
-						a.social__link(href="#" target="_blank")
-							+svg({name: "insta", class: "social__link-img"})
-					li.social__item
-						a.social__link(href="#" target="_blank")
-							+svg({name: "twitter", class: "social__link-img"})
-					li.social__item
-						a.social__link(href="#" target="_blank")
-							+svg({name: "vk", class: "social__link-img"})
-
-			section.hero__contacts 
-				h3.visually-hidden Контакты
-				a.hero__contacts-phone(href="tel:88002223790" target="_blank") 8 800 222-37-90
-				p.hero__contacts-time Работаем ежедневно с 10:00 до 20:00
-
-			section.hero__residences
-				h3.visually-hidden Жилые комплексы
-				ul.hero__residences-list
-					+residence({
-						name: "Северный парк", 
-						img: "residence",
-						about: "Жилой комплекс небывалого масштаба с развитой инфраструктурой"
-					})
-					+residence({
-						name: "Ренесанс", 
-						img: "residence",
-						about: "Жилой комплекс небывалого масштаба с развитой инфраструктурой"
-					})
-					+residence({
-						name: "Станция Столичная", 
-						img: "residence",
-						about: "Жилой комплекс небывалого масштаба с развитой инфраструктурой"
-					})
-					+residence({
-						name: "Компасс сити", 
-						img: "residence",
-						about: "Жилой комплекс небывалого масштаба с развитой инфраструктурой"
-					})
-					+residence({
-						name: "Лето", 
-						img: "residence",
-						about: "Жилой комплекс небывалого масштаба с развитой инфраструктурой"
-					})
-					+residence({
-						name: "Бруклин", 
-						img: "residence",
-						about: "Жилой комплекс небывалого масштаба с развитой инфраструктурой"
-					})
-					+residence({
-						name: "Сказочный сад", 
-						img: "residence",
-						about: "Жилой комплекс небывалого масштаба с развитой инфраструктурой"
-					})
-					+residence({
-						name: "Монблан", 
-						img: "residence",
-						about: "Жилой комплекс небывалого масштаба с развитой инфраструктурой"
-					})
-					+residence({
-						name: "Краски", 
-						img: "residence",
-						about: "Жилой комплекс небывалого масштаба с развитой инфраструктурой"
-					})
+			include hero/hero__links
+			include hero/hero__contacts
+			include hero/hero__residences
+			include hero/hero__arrows
+			include hero/hero__action
+			include hero/hero__filters
 					
-			section.hero__arrows 
-				include slider-arrows
-
-			section.hero__action 
-				h3.visually-hidden Почему именно наши квартиры
-				.hero__action-reasons 
-					p Стильная архитектура и виды из окон будущей квартиры не оставят равнодушных
-					//- p Большие парковые территории и безопасные дворы созданы для счастливой жизни
-				.hero__action-buttons 
-					button.btn.hero__action-btn Выбрать квартиру
-						+svg({name: "plus"})
-					a.btn.hero__action-link 
-						span Купить квартиру онлайн
-						+svg({name: "arrow-right"})
-					
-
+			
 
 

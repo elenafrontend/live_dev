@@ -28,5 +28,7 @@
     "stylelint-config-htmlacademy": "^0.1.7",
     "stylelint-order": "^4.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "nouislider": "^15.1.1"
+  }
 }

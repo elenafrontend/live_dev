@@ -1,0 +1,27 @@
+.hero__contacts {
+	grid-column: 2;
+	padding-top: $base * 20;
+}
+
+.hero__contacts-phone {
+	position: relative;
+	z-index: 10;
+
+	display: inline-block;
+	margin-bottom: $base * 3;
+
+	font-weight: inherit;
+	font-size: $base * 10;
+	color: $color-font-primary;
+
+	transition: $transition;
+
+	&:hover {
+		color: $color-font-secondary;
+	}
+}
+
+.hero__contacts-time {
+	margin: 0;
+	color: $color-font-secondary;
+}
