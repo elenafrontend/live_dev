@@ -58,7 +58,8 @@
 		transition: $transition;
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 		color: $color-font-primary;
 
 		&::after {
