@@ -83,7 +83,7 @@ if (rangeSliderPrice) {
 // Slider video/text
 // https://swiperjs.com/
 
-const videoSlider = new Swiper('.hero__videos', {
+const videoSlider = new Swiper('.background', {
   // Optional parameters
   loop: true,
 

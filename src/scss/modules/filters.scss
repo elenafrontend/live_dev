@@ -3,7 +3,8 @@
 	position: absolute;
 	bottom: 0;
 	margin-top: auto;
-	padding: $filter-padding 0;
+	border-top: 1px solid $color-bg-white;
+	padding: $filter-padding-top 0 $filter-padding-bottom;
 	width: 100%;
 
 	@include breakpoint-min(xs) {

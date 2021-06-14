@@ -4,7 +4,13 @@ block variables
 	-var title="Life development"
 
 block content
-	include modules/hero
+	.content
+		.background.swiper-container
+			.swiper-wrapper
+				+video("video/puppies.mp4")
+				+video("video/flowers.mp4")
+		include modules/hero
+		include modules/filters
 
 
 

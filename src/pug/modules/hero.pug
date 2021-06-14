@@ -2,18 +2,12 @@ include ../utils/mixins
 
 section.hero
 	h2.visually-hidden Подобрать квартиру своей мечты
-	.hero__videos.swiper-container
-		.swiper-wrapper
-			+video("video/puppies.mp4")
-			+video("video/flowers.mp4")
-		
 	.container
 		.hero__content
 			include hero/hero__links
 			include hero/hero__residences
 			include hero/hero__arrows
 			include hero/hero__action
-			include hero/hero__filters
 					
 			
 

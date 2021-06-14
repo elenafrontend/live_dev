@@ -37,9 +37,10 @@ $container-width: $base * 800;
 $container-padding: $base * 20;
 $column-left: $base * 204;
 $column-right: $base * 291;
-$filter-padding: $base * 17.5;
+$filter-padding-top: $base * 31;
+$filter-padding-bottom: $base * 17.5;
 $filter-option-height: $base * 28;
-$filter-height: $filter-option-height + $filter-padding * 2;
+$filter-height: $filter-option-height + $filter-padding-top + $filter-padding-bottom;
 
 // Font
 
