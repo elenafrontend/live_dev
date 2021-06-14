@@ -1,4 +1,6 @@
 .content {
+	position: relative;
+
 	._mobile & {
 		background: url("../images/mobile-bg.jpg") no-repeat;
 		background-size: cover;
