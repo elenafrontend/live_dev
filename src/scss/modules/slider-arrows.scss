@@ -12,10 +12,7 @@
 	width: $base * 20;
 	height: $base * 20;
 
-	&:hover,
-	&:focus {
-		outline: none;
-
+	&:hover {
 		&::before {
 			transform: scale(1);
 		}
