@@ -273,19 +273,30 @@ input[type="number"] {
 		border-color: $color-red;
 		padding: 0 $base * 5;
 		height: $base * 28;
-		min-width: $base * 112;
+		min-width: $base * 70;
 
 		font-weight: 300;
 		letter-spacing: 0.01em;
 		background-color: $color-red;
 
 		transition: $transition;
+		span {
+			display: none;
+		}
 
 		&:hover,
 		&:focus {
 			border-color: $color-font-primary;
 			color: $color-red;
 			background-color: $color-font-primary;
+		}
+	}
+
+	@include breakpoint-min(xs) {
+		min-width: $base * 112;
+
+		span {
+			display: inline;
 		}
 	}
 }
