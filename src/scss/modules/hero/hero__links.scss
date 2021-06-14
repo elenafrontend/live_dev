@@ -8,24 +8,22 @@
 	position: absolute;
 	bottom: 30%;
 	right: 0;
+	display: inline-block;
 
-	display: block;
-	width: 205px;
-	height: $link-height;
+	transform: translateX(136px);
 
-	background: $color-font-primary url("../images/sprite.svg#finance") no-repeat center;
-	background-size: contain;
-
-	transform: translateX(145px);
+	svg {
+		height: $link-height;
+	}
 
 	&::after {
 		content: "";
 		position: absolute;
 		top: 0;
-		left: -4px;
+		right: 100%;
 		border: $link-height/2 solid $color-font-primary;
-		border-right-width: 4px;
-		border-left-width: 4px;
+		border-right-width: 6px;
+		border-left-width: 6px;
 		border-left-color: transparent;
 		width: 0;
 		height: 0;
@@ -34,7 +32,7 @@
 	@include breakpoint-min(xs) {
 		bottom: auto;
 		left: 0;
-		width: $base * 100;
+		right: auto;
 
 		transform: translateX(0);
 
