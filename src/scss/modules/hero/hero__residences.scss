@@ -3,7 +3,7 @@
 .hero__residences {
 	display: none;
 
-	@include breakpoint-min(lg) {
+	@include breakpoint-min(md) {
 		display: block;
 		grid-column: 2/3;
 		grid-row: 3/4;
@@ -17,7 +17,8 @@
 
 	display: flex;
 	flex-wrap: wrap;
-	padding-bottom: $base * 10;
+	margin-bottom: $base * 10;
+	padding-bottom: $base * 165;
 }
 
 .hero__residences-item {
@@ -84,19 +85,21 @@
 	@extend %hide;
 
 	position: absolute;
-	top: 100%;
+	bottom: 0;
 	left: 0;
+	overflow: hidden;
 
 	transform: translateY(10%);
 	transition: $transition;
 }
 
 .residence__img {
+	margin-bottom: $base * 8;
 	width: 100%;
-	height: 100%;
+	height: $base * 115.5;
 
+	picture,
 	img {
-		margin-bottom: $base * 8;
 		border-radius: $base * 5;
 		width: 100%;
 		height: 100%;
@@ -105,12 +108,8 @@
 }
 
 .residence__description {
-	display: none;
+	height: $base * 40;
 	color: $color-font-secondary;
-
-	@include breakpoint-min(xl) {
-		display: block;
-	}
 }
 
 .residence__about-title {

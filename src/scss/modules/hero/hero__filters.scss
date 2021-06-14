@@ -1,7 +1,10 @@
 // --- Filters ---
 .hero__filters {
+	position: absolute;
+	bottom: 0;
 	margin-top: auto;
-	padding: $base * 17.5 0 $base * 21;
+	padding: $filter-padding 0;
+	width: 100%;
 
 	@include breakpoint-min(xs) {
 		grid-column: 1/5;
@@ -89,7 +92,10 @@
 
 .filters__option {
 	display: block;
-	padding: $base * 10.5 $base * 7.5 $base * 9.5;
+	padding: 0 $base * 7.5;
+	height: $filter-option-height;
+
+	line-height: $filter-option-height;
 	text-align: center;
 	background-color: $color-bg-white;
 	transition: $transition;

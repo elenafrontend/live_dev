@@ -30,9 +30,11 @@
 }
 
 .hero__content {
+	position: relative;
 	display: grid;
 	grid-template-columns: $column-left minmax($base * 30, $base * 187) minmax(0, 1fr) $column-right;
-	grid-template-rows: $header-height $base * 64 1fr $filter-height;
+	grid-template-rows: $header-height minmax($base * 20, $base * 64) max-content;
+	padding-bottom: $filter-height;
 	min-height: 100vh;
 
 	@include breakpoint-max(md) {
